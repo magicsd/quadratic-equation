@@ -6,5 +6,6 @@ module.exports = function solveEquation(equation) {
   const b = +(arr[3]+arr[4]);
   const c = +(arr[7]+arr[8]);
   const d = Math.pow(b, 2) - 4 * a * c;
-  return [(-b + Math.pow(d, 1/2)) / (2 * a), (-b - Math.pow(d, 1/2)) / (2 * a)];
+  return (a > 0) ? [Math.round((-b - Math.pow(d, 1/2)) / (2 * a)), Math.round((-b + Math.pow(d, 1/2)) / (2 * a))] :
+  [Math.round((-b + Math.pow(d, 1/2)) / (2 * a)), Math.round((-b - Math.pow(d, 1/2)) / (2 * a))];
 }
